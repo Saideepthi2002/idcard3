@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID Card</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f5;
+        font-family: Arial, sans-serif;
+      }
+
+      #id1 {
+        height: 75vh;
+        width: 250px;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        background: linear-gradient(155deg, #76a5b3, white, white, #76a5b3);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      #id2 {
+        border: 2px solid #6a5acd;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background-image: url("../assests/images/anushkasharma2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+      }
+
+      h4 {
+        margin: 0;
+        font-size: 1.5em;
+        color: #333;
+      }
+
+      h4#h1 {
+        font-weight: bold;
+        margin: 10px 0 5px 0;
+      }
+
+      #id4 {
+        border-radius: 10px;
+        padding: 10px;
+        width: 100%;
+        text-align: left;
+      }
+
+      #id4 pre {
+        margin: 5px 0;
+        font-size: 0.9em;
+        color: #333;
+        font-weight: bold;
+      }
+
+      #id4 {
+        height: 150px;
+        width: 150px;
+        /* border: 1px solid black; */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="id1">
+      <h5>CLEAN SLATE FILMZ</h5>
+      <div id="details_div">
+        <div id="id2"></div>
+        <h3 id="h1" style="color: blue">ANUSHKA SHARMA</h3>
+        <div id="id4"></div>
+      </div>
+    </div>
+    <script>
+      let id1 = document.getElementById("id1");
+      let id2 = document.getElementById("id2");
+      let details_div = document.getElementById("details_div");
+      let id4 = document.getElementById("id4");
+
+      details_div.style.height = "auto";
+      details_div.style.width = "100%";
+      details_div.style.display = "flex";
+      details_div.style.flexDirection = "column";
+      details_div.style.alignItems = "center";
+
+      let p1 = document.createElement("pre");
+      let p2 = document.createElement("pre");
+      let p3 = document.createElement("pre");
+      let p4 = document.createElement("pre");
+
+      p1.innerText = "ID     : AA-00000";
+      p2.innerText = "DOB    : 05/5/1990";
+      p3.innerText = "Phone  : 9000000000";
+      p4.innerText = "Email  : CleanSlate@123";
+
+      id4.append(p1, p2, p3, p4);
+    </script>
+  </body>
+</html>
